@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mourya Food Service</title>
+    <!--Web Guru-->
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+  background-image:url("data:image/jpeg;base64,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");
+background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <a href="#" class="logo" style="font-size:35px; "><i class="fas fa-utensils"></i>Mourya Restaurant</a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar" style="font-size:25px; ">
+            <a href="#home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#speciality">Speciality</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#popular">Popular</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#gallery">Gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#review">Review</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#order">Order</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#account">Account</a>
+        </nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3 style="font-size:25px; ">food made with love</h3>
+            <p style="font-size:20px; ">our website provides delicious food with all types of dishes and cusines.A great places to tell the world a fastfood resatarant also known as quickservice website .since in a different food-bowl restaraunts our website provide a great meal which gives you satisfaction and marvalous experiance to you .and we surely say's that your precious money is worthfull for each order.and our website is coordinated with 100+restaraunts and we have 1500+fooddelivery boys with quick service. </p>
+            <a href="#" class="btn" style="font-size:20px; ">order now</a>
+        </div>
+
+        <div class="image">
+            <img src="images/home-img.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- speciality section starts  -->
+
+    <section class="speciality" id="speciality">
+
+        <h1 class="heading"> our <span>speciality</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img class="image" src="images/s-img-1.jpg" alt="">
+                <div class="content">
+                    <img src="images/s-1.png" alt="">
+                    <h3 style="font-size:25px;>tasty burger</h3>
+                    <p style="font-size:20px; ">chicken-burger aalootikka-burger pannerkofi-burger sweetcorn-burger mushroom-bergers latchive-burgers.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-2.jpg" alt="">
+                <div class="content">
+                    <img src="images/s-2.png" alt="">
+                    <h3 style="font-size:25px;>tasty pizza</h3>
+                    <p style="font-size:20px; ">chicken-pizza paneer-pizza mushroom-pizza veg-pizza multispices-pizza cheese-pizza corn-pizza parata-pizza chilli-pizza .</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-3.jpg" alt="">
+                <div class="content">
+                    <img src="images/s-3.png" alt="">
+                    <h3 style="font-size:25px;>cold ice-cream</h3>
+                    <p style="font-size:20px; ">black-current mango venila strawberry raspberry rainbow oreoicecream kulfi  butterscorch tundercoconut grape pineapple with toppings and choclates</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-4.jpg" alt="">
+                <div class="content">
+                    <img src="images/s-4.png" alt="">
+                    <h3 style="font-size:25px;>cold drinks</h3>
+                    <p style="font-size:20px; ">sprite mazza pulpyorange mountaindue limca sting fizz bfizz coco-cola thumpsup </p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnqAp7_ADUJXhSQHQ1aFM80WtHbyz9Dydbg&usqp=CAU" alt="">
+                <div class="content">
+                    <img src="mages/s-img-5.jpg" alt="">
+                    <h3 style="font-size:25px;>tasty sweets</h3>
+                    <p style="font-size:20px; ">malaipuri kajuburfi gulabjamun rasagullaa soampapidi rasmalai bundiladdu cova's kajukatli srikhand khaja putharekulu kheer jilebi misurpak.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-6.jpg" alt="">
+                <div class="content">
+                    <img src="images/s-6.png" alt="">
+                    <h3 style="font-size:25px;>healty breakfast</h3>
+                    <p style="font-size:20px; ">idly dosa vada puri kattepongali iddiyappam uthappam pulihora upma punugu misurebonda .</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- speciality section ends -->
+
+    <!-- popular section starts  -->
+
+    <section class="popular" id="popular">
+
+        <h1 class="heading"> most <span>popular</span> foods </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <span class="price">rs70-rs250 </span>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.pUqX9ysdiglqUspiQYwylQHaEn&pid=Api&P=0" alt="">
+                <h3 style="font-size:25px;>burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> rs100-rs250</span>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.kh-ltOPgE29y3UiIESFrSwHaFj&pid=Api&P=0" alt="">
+                <h3 style="font-size:25px;>cakes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> rs250-rs1500 </span>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.l6--uguOrKWvC57zydG_3gHaE8&pid=Api&P=0" alt="">
+                <h3 style="font-size:25px;>sweets</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price">rs50-rs100 </span>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.9_JlRTddTcOPKNoxI7yBRAHaHa&pid=Api&P=0" alt="">
+                <h3 style="font-size:25px;>cupcakes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price">rs20-rs150</span>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.ooDFjPWSB4Gb_dsuL_X1WAHaHk&pid=Api&P=0" alt="">
+                <h3 style="font-size:25px;>cold drinks</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> rs100-rs400</span>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.gNR-wuDnPDioU5IgSfi8DwHaFj&pid=Api&P=0" alt="">
+                <h3 style="font-size:25px;>cold ice-cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- popular section ends -->
+
+    <!-- steps section starts  -->
+
+    <div class="step-container">
+
+        <h1 class="heading">how it <span>works</span></h1>
+
+        <section class="steps">
+
+            <div class="box">
+                <img src="images/step-1.jpg" alt="">
+                <h3>choose your favorite food</h3>
+            </div>
+            <div class="box">
+                <img src="images/step-2.jpg" alt="">
+                <h3 style="font-size:25px;>free and fast delivery</h3>
+            </div>
+            <div class="box">
+                <img src="images/step-3.jpg" alt="">
+                <h3 style="font-size:25px;>easy payments methods</h3>
+            </div>
+            <div class="box">
+                <img src="images/step-4.jpg" alt="">
+                <h3 style="font-size:25px;>and finally, enjoy your food</h3>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- steps section ends -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading"> food <span> gallery </span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP._F73KiH7tc_u6Qxb0UCbHwHaEN&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>from haveli kitchen</h3>
+                    <p style="font-size:20px; ">fried rice pancakes burger pizza hydrabadidum biriyani icecreams staters flakes.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.Jrh3qAFhTTAo8PWYUegR2gHaED&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>from geetha restaraunt</h3>
+                    <p style="font-size:20px; ">roti's rice all types of biriyani's stater's vegthali non-vegthali veg-pulav soups.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.tC_Un-6PCHiL8cSeI7HzPAAAAA&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>from taj hotel</h3>
+                    <p style="font-size:20px; "> pastha frenchfries sadwich milkshakes maggistyles pavbaji sweets chickenrolls chats</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.98osuZ_thFTG0Si0iHIXEAAAAA&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>sidhartha hotel</h3>
+                    <p style="font-size:20px; ">francki panipuri biriyani's burger's sandwiches milkshakes taccos rolls paratas </p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.Zvz0F7qqgjOR31VO68Lf8AHaE8&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>the capital hotel</h3>
+                    <p style="font-size:20px; ">hotdogs donuts pancakes friedrices non-vegspecials cofee-master veg-special noodles nachos.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.OHtK_wYVPUcKzBYEUaXz2AHaD4&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>from hotel subhani</h3>
+                    <p style="font-size:20px; ">deserts biriyanispecials chineese-cusine soups biriyani's pulav meals juices cakes sweets pancakes.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.0QgbhiIRh7xdrH28M6R5LQHaG-&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>from paradise</h3>
+                    <p style="font-size:20px; ">biriyani-combopack's fried-rices kabbs currys non-veg thali chineesebowl stater's deserts milkshakes mushrooom-menu breads rotis buisuts sodas</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.cPqnR_aviytZnGl8BDLXnwHaFj&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>from cousin's cusine</h3>
+                    <p style="font-size:20px; ">veg-staters chicken-staters biriyanicombo tanduricombo veg-items non-vegitems roti's&non's salads combomeal soups chineese mocktails hot-bevarages</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.GC6vOS1U3M5-YrufBbqpXwHaFj&pid=Api&P=0" alt="">
+                <div class="content">
+                    <h3 style="font-size:25px;>from pizza world</h3>
+                    <p style="font-size:20px; ">The Pizza Connection
+Stuff My Cheese
+The Crispy Crust Pizzeria
+Newton’s Pizza
+Prima Pizza
+The Real Deal
+Pizza Cardinal
+Melted Cheese
+Heavenly Delights
+The Cheese Lover’s Pizzeria</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- gallery section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> Customers <span>Reviews</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/pic1.png" alt="">
+                <h3 style="font-size:25px;>soniya jaman</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p style="font-size:20px; ">must try these services fast delivery and providing good and quality food thank you for your services.</p>
+            </div>
+            <div class="box">
+                <img src="images/pic2.png" alt="">
+                <h3 style="font-size:25px;>mr suyeb</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p style="font-size:20px; ">nice food iam very much satisfied thank you for this service</p>
+            </div>
+            <div class="box">
+                <img src="images/pic3.png" alt="">
+                <h3 style="font-size:25px;>robart sonu</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p style="font-size:20px; ">in time delivery tasty and delicious food good service</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- order section starts  -->
+
+    <section class="order" id="order">
+
+        <h1 class="heading"> <span>order</span> now </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/order1.jpg" alt="">
+            </div>
+
+            <form action="">
+
+                <div class="inputBox">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                </div>
+
+                <div class="inputBox">
+                    <input type="number" placeholder="number">
+                    <input type="text" placeholder="food name">
+                </div>
+
+                <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="order now" class="btn">
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- order section ends -->
+
+    <!-- footer section  -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="btn">facebook</a>
+            <a href="#" class="btn">twitter</a>
+            <a href="#" class="btn">instagram</a>
+            <a href="#" class="btn">pinterest</a>
+            <a href="#" class="btn">linkedin</a>
+        </div>
+
+        <h1 class="credit"> Created by <span> saipriya </span> | All rights reserved </h1>
+
+    </section>
+
+    <!-- scroll top button  -->
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- loader  -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--saipriya-->
+
+
+
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
